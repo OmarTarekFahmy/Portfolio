@@ -7,13 +7,12 @@ export default function Hero() {
       {/* Left side — Text */}
       <div className="md:w-1/2 space-y-6">
         <h1 className="text-5xl md:text-6xl font-bold">
-          Hi, I'm <span className="text-blue-400">Omar</span> <span className="text-blue-800">Fahmy</span>
+          Hi<span className="text-blue-100">,</span> <span className="text-blue-400">I'm</span> <span className="text-blue-500">Omar</span> <span className="text-blue-800">Fahmy</span>
         </h1>
-        <p className="text-lg text-gray-300 max-w-lg">
-           I'm a computer engineer with a strong background in hardware design,
-  embedded systems, and low-level programming, combining technical depth
-  with solid experience in backend development to build efficient and
-  reliable solutions from the ground up.
+        <p className="text-xl text-gray-300 max-w-xl">
+           Computer engineer specializing in hardware design, 
+           embedded systems, low-level programming, backend development, 
+           and exploring intelligent systems through AI.
         </p>
         <div className="flex justify-center md:justify-start gap-4">
           <a
