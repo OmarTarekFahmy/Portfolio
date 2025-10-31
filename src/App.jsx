@@ -9,7 +9,7 @@ export default function App() {
     <div className="bg-gray-950 text-white scroll-smooth">
       <Navbar />
       <main>
-        <section id="home"><Hero /></section>
+        <section id="home" className="pt-16 md:pt-0"><Hero /></section>
         <section id="about"><About /></section>
         <section id="projects"><Projects /></section>
         <section id="contact"><Contact /></section>
