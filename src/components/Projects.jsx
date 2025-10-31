@@ -4,7 +4,7 @@ const projects = [
     description:
       "A frontend web app built with React, Tailwind CSS, and shadcn/ui to streamline the university internship process. Includes dashboards for students and companies, internship listings, and evaluation management — all in a modern, responsive UI.",
     image: "/internship_tracker.png",
-    tech: ["C", "FreeRTOS", "STM32", "Node.js"],
+    tech: ["ReactJS", "ShadCN", "Node.js"],
     link: "https://github.com/OmarTarekFahmy/internship-tracker",
   },
   {
