@@ -10,17 +10,17 @@ const projects = [
   {
     title: "Portfolio Website",
     description:
-      "A responsive one-page developer portfolio built with React and Tailwind CSS, featuring smooth scroll navigation and a dark mode design.",
-    image: "/images/portfolio.jpg",
+      "A responsive one-page developer portfolio built with React and Tailwind CSS, featuring smooth scroll navigation and a dark mode design. (Yes, the page you're on right now)",
+    image: "/portfolio.png",
     tech: ["React", "TailwindCSS", "Vercel"],
     link: "https://yourportfolio.vercel.app",
   },
   {
-    title: "Linux System Monitor",
+    title: "CPU Pipeline Simulator",
     description:
-      "A CLI tool for analyzing process and memory usage on Linux systems, built in C++ using low-level system calls and /proc parsing.",
-    image: "/images/linux-monitor.jpg",
-    tech: ["C++", "Linux", "System Programming"],
+      "A simulated CPU written in C for Linux, implementing a 5-stage instruction pipeline (fetch, decode, execute, memory, write-back). Parses pseudo-assembly input files, maintains register and memory state, and handles data/control hazards through pipeline stalls and forwarding — providing a functional model of a pipelined processor’s execution flow.",
+    image: "/pipelining.png",
+    tech: ["C", "Linux", "Computer Architecture", "Pipelining"],
     link: "https://github.com/yourusername/linux-monitor",
   },
 ];
