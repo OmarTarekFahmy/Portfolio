@@ -72,7 +72,7 @@ export default function Hero() {
       {/* Right side — Image */}
       <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
         <img
-          src="/profile.jpeg"
+          src="/duck.jpg"
           alt="Omar Fahmy"
           className="
             w-72 h-72 object-cover rounded-full shadow-2xl border-4 transition-all duration-500
