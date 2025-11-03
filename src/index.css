@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -15,6 +17,21 @@
   animation: fadeIn 0.3s ease-in-out;
 }
 
+@keyframes toastSlideIn {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-toastSlideIn {
+  animation: toastSlideIn 0.4s ease-out;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -23,4 +40,14 @@ html,
 body {
   background-color: #111827; /* same as bg-gray-900 */
   overflow-x: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
 }
