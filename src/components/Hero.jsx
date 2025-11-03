@@ -1,7 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Hero() {
-  const [showResume, setShowResume] = useState(false);
+export default function Hero({}) {
+  const [isDarkMode, setIsDarkMode] = useState(
+    document.documentElement.classList.contains("dark")
+  );
+
+  useEffect(() => {
+    const observer = new MutationObserver(() => {
+      setIsDarkMode(document.documentElement.classList.contains("dark"));
+    });
+
+    // Observe changes to the <html> element's class attribute
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+  // Choose image based on theme
 
   return (
     <section
@@ -15,7 +32,7 @@ export default function Hero() {
     >
       {/* Left side — Text */}
       <div className="md:w-1/2 space-y-6">
-        <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+        <h1 className="text-5xl md:text-5xl font-bold leading-tight">
           <span className="text-gray-800 dark:text-blue-100">Hi</span>
           <span className="text-pink-500 dark:text-blue-200">,</span>{" "}
           <span className="text-pink-500 dark:text-blue-400">I'm</span>{" "}
@@ -70,14 +87,15 @@ export default function Hero() {
       </div>
 
       {/* Right side — Image */}
-      <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+      <div className="md:w-1/2 flex justify-center mt-10 md:mt-0 relative w-72 h-72">
+        {/* Light mode image */}
         <img
-          src="/duck.jpg"
+          src={isDarkMode ? "/profile_dark.jpeg" : "/profile.jpeg"}
           alt="Omar Fahmy"
           className="
-            w-72 h-72 object-cover rounded-full shadow-2xl border-4 transition-all duration-500
-            border-blue-600 dark:border-blue-800 dark:shadow-blue-900/50
-          "
+          w-72 h-72 object-cover rounded-3xl shadow-2xl border-4 transition-all duration-500
+          border-blue-600 dark:border-blue-800 dark:shadow-blue-900/50
+        "
         />
       </div>
     </section>
