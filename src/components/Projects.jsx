@@ -21,7 +21,7 @@ const projects = [
       "A simulated CPU written in C for Linux, implementing a 5-stage instruction pipeline (fetch, decode, execute, memory, write-back). Parses pseudo-assembly input files, maintains register and memory state, and handles data/control hazards through pipeline stalls and forwarding — providing a functional model of a pipelined processor’s execution flow.",
     image: "/pipelining.png",
     tech: ["C", "Linux", "Computer Architecture", "Pipelining"],
-    link: "https://github.com/yourusername/linux-monitor",
+    link: "https://github.com/OmarTarekFahmy/MIPS32_Architecture",
   },
 ];
 
